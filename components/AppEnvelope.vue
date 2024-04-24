@@ -69,12 +69,16 @@ watchOnce(isClicked, () => {
 .text {
     color: white;
     display: flex;
-    align-items: center;
-    gap: 100px;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
     transition: opacity ease-out 1s;
+    width: 85vw;
 
     & > div {
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
 
     p {
@@ -82,20 +86,20 @@ watchOnce(isClicked, () => {
     }
 
     .title {
+        flex-basis: 100%;
         p {
             font-family: 'Ade Display', sans-serif;
             font-size: 40px;
             text-transform: uppercase;
-            text-wrap: nowrap;
             margin-top: 5px;
             transform: translateX(110%);
         }
     }
 
     .infos {
+        flex-basis: 100%;
         p {
             font-family: 'Montserrat', sans-serif;
-            text-wrap: nowrap;
             font-weight: 300;
             font-size: 20px;
             transform: translateX(-110%);
@@ -122,7 +126,8 @@ watchOnce(isClicked, () => {
     font-size: 25px;
     opacity: 0;
     transition: all ease-out 0.5s;
-    text-wrap: nowrap;
+    width: 85vw;
+    text-align: center;
 
     &.active {
         opacity: 1;
