@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <AppEnvelope :default-position="{ x: 50, y: 50 }" />
-    </div>
+    <app-envelope-v2 />
 </template>
 
 <style lang="scss">
@@ -41,5 +39,18 @@ body {
 *::before {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 </style>
